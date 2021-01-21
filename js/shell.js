@@ -1,10 +1,8 @@
-
-
 // refreshing page automatically when viewport size change 
- 
+ cl = console.log;
 
-var href = window.location.href.split("/")
-var html_location = href[href.length-1]
+let href = window.location.href.split("/")  // dump url into array
+let html_location = href[href.length-1]     // grab last element
 
 if (window.innerWidth >= 960 && html_location !== "shell.html") {
     window.location = "shell.html";
@@ -13,6 +11,7 @@ if (window.innerWidth >= 960 && html_location !== "shell.html") {
 if (window.innerWidth < 960 && html_location !== "shell2.html") {
     window.location = "shell2.html";
 }
+
 
 var timeOut = null;
 
